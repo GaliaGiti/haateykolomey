@@ -1,0 +1,52 @@
+<% if(typeof errors != 'undefined'){%>
+    <% errors.forEach(function(error){ %>
+        
+          
+           <div >
+            <%= error.msg %>
+          </div>
+ <% }); %>
+<%} %>
+
+<% if(success_msg != ' '){ %>
+    <div >
+        <%= success_msg %>
+      </div>
+<% } %>
+
+<% if(error_msg != ' '){ %>
+    <div >
+        <%= error_msg %>
+      </div>
+<% } %>
+
+<% if(error != ' '){ %>
+    <div >
+        <%= error %>
+      </div>
+<% } %>
+
+<form action="/users/register" method="POST">
+<div class="login-page">
+    <div class="form">
+        <form class="register-form">
+            <div class="form-group">
+            <input type="name" id="name" name="name" class="form-control" placeholder="user name" value=" <%= typeof name != 'undefined' ? name : ' ' %>">
+            </div>
+            <div class="form-group">
+            <input type="email" id="email" name="email" class="form-control" placeholder="email id" value=" <%= typeof email != 'undefined' ? email : ' ' %>">
+            </div>
+            <div class="form-group">
+            <input type="password" id="password" name="password" class="form-control" placeholder="password" value=" <%= typeof email != 'undefined' ? password : ' ' %>">
+            </div>
+           <div class="form-group">
+            <input type="password" id="Password2" name="password2" class="form-control"  placeholder="confirm password" value=" <%= typeof email != 'undefined' ? password2 : ' ' %>">
+           </div>
+            <button type = "submit">Register</button>
+           <p class="message"> Already Registered? <a href="/users/login">Log in</a></p>
+        </form>
+        
+        
+    </div>
+</div>
+</form>

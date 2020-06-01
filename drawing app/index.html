@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sample drawing app</title>
+</head>
+
+<body style="background-color: rgb(26, 26, 31); color: blanchedalmond;">
+    <h2 id="abulkashem">Amader Drawing App</h2>
+
+    <canvas id="amaderCanvas" style=" border: 1px solid orangered;"></canvas>
+
+    <script>
+        const gitirCanvas = document.getElementById('amaderCanvas');
+        gitirCanvas.width = 500;
+        gitirCanvas.height = 500;
+
+        gitirCanvas.addEventListener('pointermove', (e) => {
+            console.log(e)
+            console.log(e.offsetX, e.offsetY);
+            drawCircle(e.offsetX,e.offsetY, 5)
+        })
+
+        const drawCircle = (x, y, radius) => {
+            const ctx = gitirCanvas.getContext('2d');
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 180);
+            ctx.strokeStyle = 'red';
+            ctx.fillStyle = 'blue';
+            ctx.fill();
+            ctx.stroke();
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loginPage.css" >
+    
+</head>
+<body>
+    
+   
+   
+     
+    <div class="container">
+        <%- body %>
+    </div>
+
+
+    <script>
+        var registerLink = document.getElementById("registerLink");
+        var loginLink = document.getElementById("loginLink");
+        var registerForm = (document.getElementsByClassName("register-form"))[0]
+        var loginForm = (document.getElementsByClassName("login-form"))[0]
+        var create = document.getElementById("create")
+
+        registerLink.addEventListener("click", function(){
+            registerForm.style.display = "block";
+            loginForm.style.display = "none";
+
+        });
+
+        loginLink.addEventListener("click", function(){
+            loginForm.style.display = "block";
+            registerForm.style.display = "none";
+        });
+
+       
+
+        
+    </script>
+
+
+</body>
+</html>
