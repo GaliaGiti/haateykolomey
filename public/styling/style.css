@@ -73,11 +73,13 @@
      border: 1px solid tomato; 
     
     top: -1px;
-    left: 100;
+    
+    
+    
     position: absolute;
     display: block;
      /*border-radius: 150px; */
-    width: 100%;
+    width: 95%;
    height: 100%;
    
     
@@ -142,7 +144,7 @@
     border: 1px solid gray;
     position: relative;
     border-bottom: 1px dotted black;
-
+    float: right;
     
 
 }
@@ -160,9 +162,10 @@
   
   bottom: 20%;
   left: 50%;
+  margin-left: -160px;
   
-  /*margin-left: -60px;*/
-  margin-left: 25px;
+  
+  /*margin-left: 25px; */
   
 }
 
@@ -186,7 +189,8 @@
     margin-top: 1px; 
     border: 1px solid gray;
     position: relative;
-    
+    margin-top: 60px;
+    margin-right: -45px;
    
 }
 
@@ -227,8 +231,10 @@
     display: block;
     margin: 5px;
     border: 1px solid gray;
-   /* float: right;
-    top: 565px;*/
+    float: right;
+    top: 100px;
+    left: 50px;
+    
     
 }
 
@@ -261,7 +267,9 @@
   
   bottom: 20%;
   left: 50%;
-  margin-left: 25px;
+  /*margin-left: 25px;*/
+  margin-left: -100px;
+
   
   
 
@@ -332,11 +340,12 @@
     width: 40px;
     background-color:  #FF6600 ;
     text-align: center;
-    margin-top: 530px;
-    /*margin-top: 580px;*/
+    margin-top: 570px;
+    
     margin-left: 5px;
     font-size: 20px;
     border: 1px solid gray;
+    
     
     
     

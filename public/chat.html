@@ -56,18 +56,9 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
         
-        <div class="canvas-container">
-            <canvas id="canvas"></canvas>
-
-        </div>
+        
         <div class="canvas-container">
 
-            <button id="boardButton">
-                <span class="tooltipForBoardButton">make the board colorful</span>
-            </button>
-            
-            <button id="brushButton">
-                <span class="tooltipForBrushButton">pick a colored brush</span>
                 
 
             </button>
@@ -99,8 +90,14 @@
                 </div>
             </div>
 
-            <!--<canvas id="canvas"></canvas>-->
+            <canvas id="canvas"></canvas>
 
+            <button id="boardButton">
+                <span class="tooltipForBoardButton">make the board colorful</span>
+            </button>
+            
+            <button id="brushButton">
+                <span class="tooltipForBrushButton">pick a colored brush</span>
             
             
             <button id="eraseButton">
@@ -112,6 +109,7 @@
                     <span class ="tooltipForVoiceButton">make a call</span>
                 </button>
             </div>
+            
             
 
         </div>
@@ -128,11 +126,14 @@
             <input id="clientName" type="text" placeholder="Your name?">
             <button id="sendButton"></button>
         </div>
+        <canvas id="canvas"></canvas>
+
         <script src="./pdf/pdf.js"></script>
         <script src="./jsForChatPageButtonElements/buttons.js"></script>
+        <script src="./webpackBuild/brushBoard.js"></script>
         
         <script src="./chat.js"></script>
-        <script src="./webpackBuild/brushBoard.js"></script>
+
        
     </div>
 

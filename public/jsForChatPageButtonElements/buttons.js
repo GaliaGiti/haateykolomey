@@ -60,8 +60,8 @@
                 brushButton.style.display = "none";
                 eraseButton.style.display = "none";
                 document.body.style.backgroundColor = "white";
-                voiceButton.style.marginTop = "-519px";
-                /*voiceButton.style.marginTop = "-569px";*/
+                voiceButton.style.marginTop = "-560px";
+                voiceButton.style.display = "block";
                 slideContainer.style.display = "block"
                 slideButton.style.backgroundColor = "#C9C9C9";
                 slideButton.style.color = "white";
@@ -78,7 +78,7 @@
                 brushButton.style.display = "block";
                 eraseButton.style.display = "block";
                 voiceButton.style.marginTop = "5px";
-                brushButton.style.marginTop = "-49px";
+               // brushButton.style.marginTop = "-49px";
                 eraseButton.style.marginTop = "10px";
                 drawingBoard.style.backgroundColor = "#C9C9C9";
                 drawingBoard.style.color = "white";
