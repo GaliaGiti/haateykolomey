@@ -60,7 +60,8 @@
                 brushButton.style.display = "none";
                 eraseButton.style.display = "none";
                 document.body.style.backgroundColor = "white";
-                voiceButton.style.marginTop = "-560px";
+               
+                voiceButton.style.marginTop = "-612px";
                 voiceButton.style.display = "block";
                 slideContainer.style.display = "block"
                 slideButton.style.backgroundColor = "#C9C9C9";
