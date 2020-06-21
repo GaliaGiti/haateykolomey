@@ -2,6 +2,8 @@ class Board {
     constructor(canvas, boardWidth, boardHeight) {
         this.boardWidth = boardWidth;
         this.boardHeight = boardHeight;
+    
+        
         this.canvas = canvas;
         this.isDrawingPossible = false;
         this.drawingInfo = {
@@ -16,6 +18,8 @@ class Board {
     getCanvas(){
         return this.canvas;
     }
+   
+    
 
     fitCanvasToParent(){
         this.getCanvas().width = this.getCanvas().parentElement.offsetWidth;
@@ -33,13 +37,7 @@ class Board {
             }
         }
 
-        // handling mousedown events
-        this.canvas.addEventListener("mousedown", (e) => {
-            isMouseDown = true;
-            decideIsDrawingPossible();
-            this.drawingInfo.currentX = e.offsetX;
-            this.drawingInfo.currentY = e.offsetY;
-        })
+        
         
         // handling mousemove
         this.canvas.addEventListener("mousemove", (e) => {
