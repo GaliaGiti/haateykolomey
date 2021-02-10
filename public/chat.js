@@ -7,9 +7,45 @@ var roomName = document.getElementById('roomName')
 var roomPassword = document.getElementById('roomPassword')
 
 window.addEventListener('load', ()=>{
-    clientSocket.emit("userJoined", {
-        roomName: roomName.innerText
+    const constraints = {audio: false, video: {width:100, height:70}}
+    const videobox = document.querySelector('.videobox')
+
+    // const userID = 'Abul Kashem'
+    const peer = new Peer(undefined, {
+        host: '/',
+        port: '8001'
     })
+
+    peer.on('open', (id)=>{
+        console.log("peer id: " + id)
+        addVideo(constraints)
+        clientSocket.emit("userJoined", {
+            roomName: roomName.innerText,
+            userId: id
+        })
+    })
+
+
+
+
+    const addVideo = (constraints)=>{
+        navigator.mediaDevices.getUserMedia(constraints)
+        .then((stream) => {
+            const myVid = document.createElement('video')
+            myVid.srcObject = stream
+            videobox.appendChild(myVid)
+            myVid.onloadedmetadata = (e) => {
+                myVid.play()
+            }
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+    }
+
+
+
+
 })
 
 sendButton.addEventListener('click', () => {
