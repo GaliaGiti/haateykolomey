@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+body{
+    background-image: url(./images/catbook.jpg) ;
+    height: calc(100vh - 80px);
+    background-position: center;
+    background-size: cover;
+   
+    font-family: sans-serif;
+}
+
+.menu-bar{
+    background: #616262;
+    
+    width: 100%;
+    height: 80px;
+}
+
+.menu-bar ul{
+   
+    float: right;
+    margin-right: 20px;
+    
+}
+
+.menu-bar ul li{
+    cursor: pointer;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    padding: 5px;
+    width: 100px;
+    color: #EBECEE;
+
+}
+
+#btn1{
+    border: 1px solid #4CAF50;
+    background:#4CAF50;
+    color: #EBECEE;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: sans-serif;
+    margin: 10px;
+    cursor: pointer;
+}
+
+label.logo{
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+    color: #8F8C7B;
+    
+}
+
+.wrapper{
+    width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+    color: #aaad7b;
+    
+}
+
+
+.banner-area{
+    width: 100%;
+    height: 350px;
+    }
+
+.banner-area h2{
+    text-align: center;
+    padding-top: 17%;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #886C5B;
+    
+}
+
+.login-page{
+    width: 360px;
+    padding: 10% ;
+    margin: auto;
+    display: none;
+    
+    
+}
+
+.form{
+    
+    background: rgba(100, 107, 130, 0.3);
+    max-width: 360px;
+    padding: 45px;
+    text-align: center;
+    
+}
+
+.form input{
+    font-family: "Roboto";
+    background: #f2f2f2;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+   
+}
+.form button{
+    font-family: "Roboto";
+    text-transform: uppercase;
+    background: #4CAF50;
+    width: 100px;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#btn1:hover{
+    background: #79ad5e;
+
+    
+}
+
+#LOGIN:hover{
+    color: #79ad5e ;
+
+} 
+
+#home:hover{
+    color: #79ad5e ;
+
+} 
+
+#about:hover{
+    color: #79ad5e ;
+
+} 
+#help:hover{
+    color: #79ad5e ;
+
+} 
+#contact:hover{
+    color: #79ad5e ;
+
+} 
+
+
+
+.form button:hover{
+    background:rgb(66, 245, 78);
+}
+
+.form .message{
+    margin: 15px;
+    color: aliceblue;
+}
+ .message a{
+    color: #150d36
+}
+
+ .register-form{
+    display: none;
+}
+
+#registerLink{
+    color: #1A0DAB;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+#loginLink{
+    color:#1A0DAB;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+#login{
+    background-color:  #4CAF50;
+    color:  #FFFFFF;
+    cursor: pointer;
+    width: 100px;
+    text-transform: uppercase;
+}
+
+
+
+input: hover[type = "button"]
+{
+    background:rgb(66, 245, 78);
+}
