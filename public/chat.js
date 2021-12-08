@@ -29,7 +29,7 @@ window.addEventListener("load", (e)=>{
   function linkify(text) {
     var exp =
       /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
-    return text.replace(exp, "<a href='$1' target='_blank'>$1</a>");
+    return text.replace(exp, "<a class = 'hyperLink' href='$1' target='_blank'><span id='hyperLinkToolTip'>Share with others</span>$1</a>");
   }
 
   
