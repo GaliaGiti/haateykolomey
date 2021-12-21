@@ -29,6 +29,7 @@
                 <form id="form_createRoom" class="form-vertical" action="/createChatRoom" method="POST">
                     <div>Create a room</div>
                     <input id="roomNameInput" name="roomName" type="text" placeholder="Name of your room">
+                    <input id="usernameInput" name="username" type="text" placeholder="Your username">
 
                     <button id="submit" type="submit">Create</button>
                     <p class="message">Want to join a chatroom? <span id="registerLink"><a>Join here</a></span></p>
@@ -57,6 +58,9 @@
                     </span> <span id="lastname">
                         <%= lastname %>
                     </span>
+                    <span id="username">
+                        <%= username %>
+                    </span>
                 </div>
             </div>
             <img src="./cat01.png" alt="">
@@ -66,6 +70,8 @@
         window.addEventListener('load', (e) => {
             const firstname = document.getElementById('firstname').innerHTML
             const lastname = document.getElementById('lastname').innerHTML
+            const username = document.getElementById('username').innerHTML
+
 
             const submitButton = document.getElementById('submitButton');
             const roomNameInput = document.getElementById('roomNameInput');
@@ -82,6 +88,7 @@
 
             localStorage.setItem('firstname', firstname)
             localStorage.setItem('lastname', lastname)
+            localStorage.setItem('username', username)
 
             submitButton.addEventListener('click', (e) => {
                 clientSocket.emit('roomCreated', {

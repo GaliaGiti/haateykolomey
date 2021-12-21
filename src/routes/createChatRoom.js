@@ -8,7 +8,7 @@ const PASSWORD_LENGTH = 16;
 
 router.post("/createChatRoom", async (req, res, next) => {
   const roomPassword = randomString.generate(PASSWORD_LENGTH);
-  const { roomName } = req.body;
+  const { roomName, username} = req.body;
   roomNameSanitized = roomName.trim().replace(/ /g, "");
 
   /*   const debResponse =  executeSQLQawaituery(
@@ -39,16 +39,14 @@ router.post("/createChatRoom", async (req, res, next) => {
     `);
   } else {
     const dbResponse2 = await executeSQLQuery(
-      `insert into rooms (room_name, room_password)
-       values('${roomNameSanitized}', '${roomPassword}')
+      `insert into rooms (room_name, room_password, creator_username)
+       values('${roomNameSanitized}', '${roomPassword}', '${username}')
       `
     ).catch((err) => {
       console.log(err);
       res.send(err);
     });
 
-   
-    
     // res.redirect(`chatsession/${roomNameSanitized}`);
     res.redirect(`chatsession/${roomNameSanitized}/?roomPassword=${roomPassword}`);
   }
